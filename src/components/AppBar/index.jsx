@@ -45,12 +45,13 @@ function AppBar() {
           <Typography variant='span' sx={{ fontSize: '1.2rem', color: 'primary.main', fontWeight: 'bold' }}>Trello</Typography>
         </Box>
 
-        <Workspaces />
-        <Recent />
-        <Starred />
-        <Templates />
-
-        <Button variant="outlined">Create</Button>
+        <Box sx={{ display: { sx: 'none', md: 'flex' }, gap: 1 }}>
+          <Workspaces />
+          <Recent />
+          <Starred />
+          <Templates />
+          <Button variant="outlined">Create</Button>
+        </Box>
       </Box>
 
       {/* Search */}
@@ -68,7 +69,7 @@ function AppBar() {
           <HelpOutlineIcon />
         </Tooltip>
 
-        <Profiles/>
+        <Profiles />
       </Box>
 
     </Box>
