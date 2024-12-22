@@ -55,17 +55,17 @@ function AppBar() {
       </Box>
 
       {/* Search */}
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
         <TextField id="outlined-search" label="Search..." type="search" size='small' />
         <ModeSelect />
 
         <Tooltip title="Notification">
-          <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
+          <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer', color: 'primary.main' }}>
             <NotificationsNoneIcon />
           </Badge>
         </Tooltip>
 
-        <Tooltip title="Help" sx={{ cursor: 'pointer' }}>
+        <Tooltip title="Help" sx={{ cursor: 'pointer', color: 'primary.main' }}>
           <HelpOutlineIcon />
         </Tooltip>
 
