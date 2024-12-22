@@ -8,7 +8,11 @@ function BoardBar() {
       height: (theme) => theme.trelloCustom.boardBarHeight,
       width: '100%',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      justifyContent:'space-between',
+      gap: 2,
+      overflowX: 'auto',
+      borderTop: '1px solid #00bfa5'
     }}>
       Boardbar
     </Box>
