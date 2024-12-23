@@ -31,11 +31,11 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 30, height: 30, mr: 2 }}>
-            <img src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-1/331128624_923149312039349_7123416543553814827_n.jpg?stp=c0.371.1677.1677a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_ohc=kJ3O0uO2UxgQ7kNvgFwXni-&_nc_oc=AdjMP9KIp2l7qIyCmBubZmQK5EhsjcB7Vg6eO4ZSqodjwl6lfqx64vM9jK8q30KJbVI&_nc_zt=24&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AaebcHgYe-HNPsmgnDXIUP3&oh=00_AYCXPDgUFNCbPLklTMdDneQtaB3M7bkSX8FJkLj0NwIEVQ&oe=676A127F" alt="" />
-          </Avatar>
+          <Avatar sx={{ width: 34, height: 34, mr: 2 }}
+            alt="Remy Sharp" src="https://24hstore.vn/upload_images/images/hinh-nen-anime/hinh-nen-anime-35(1).jpg" />
         </IconButton>
       </Tooltip>
+      
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
