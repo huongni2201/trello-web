@@ -9,6 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Button from '@mui/material/Button';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import Tooltip from '@mui/material/Tooltip';
 
 
 const MENU_STYLES = {
@@ -69,12 +70,23 @@ function BoardBar() {
           sx={{
             '& .MuiAvatarGroup-avatar': {
               width: '34px',
-              height: '34px'
+              height: '34px',
+              fontSize: '16px',
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { bgcolor: '#a4b0be'}
             }
           }}
         >
-          <Avatar alt="Remy Sharp" src="https://24hstore.vn/upload_images/images/hinh-nen-anime/hinh-nen-anime-35(1).jpg" />
-          <Avatar alt="Remy Sharp" src="https://haycafe.vn/wp-content/uploads/2023/06/hinh-anh-anime-nu-do-AI-ve.jpg" />
+          <Tooltip title="Anime">
+            <Avatar alt="Remy Sharp" src="https://24hstore.vn/upload_images/images/hinh-nen-anime/hinh-nen-anime-35(1).jpg" />
+          </Tooltip>
+
+          <Tooltip title="Anime">
+            <Avatar alt="Remy Sharp" src="https://haycafe.vn/wp-content/uploads/2023/06/hinh-anh-anime-nu-do-AI-ve.jpg" />
+          </Tooltip>
+
           <Avatar alt="Remy Sharp" src="https://i.pinimg.com/236x/1d/b5/4e/1db54e832b76e7ab8964e31a25523885.jpg" />
           <Avatar alt="Remy Sharp" src="https://thuthuatnhanh.com/wp-content/uploads/2022/04/Anh-anime-nu-buon.jpeg" />
           <Avatar alt="Remy Sharp" src="https://i.pinimg.com/236x/c0/4e/13/c04e13d68c8dcd2920ca03f44c836b4e.jpg" />

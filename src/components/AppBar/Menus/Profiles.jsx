@@ -35,7 +35,7 @@ function Profiles() {
             alt="Remy Sharp" src="https://24hstore.vn/upload_images/images/hinh-nen-anime/hinh-nen-anime-35(1).jpg" />
         </IconButton>
       </Tooltip>
-      
+
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -73,11 +73,28 @@ function Profiles() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleClose} >
-          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> Profile
+        <MenuItem onClick={handleClose}>
+          <Avatar
+            sx={{
+              '&.MuiAvatar-root': {
+                width: '30px',
+                height: '30px',
+                marginLeft: -0.25,
+                marginRight: 2
+              }
+            }}
+          /> Profiles
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> My account
+          <Avatar sx={{
+            '&.MuiAvatar-root': {
+              width: '30px',
+              height: '30px',
+              marginLeft: -0.25,
+              marginRight: 2
+            }
+          }}
+          /> My account
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleClose}>
