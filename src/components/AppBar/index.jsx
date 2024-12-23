@@ -47,17 +47,18 @@ function AppBar() {
           <Typography variant='span' sx={{ fontSize: '1.2rem', color: 'primary.main', fontWeight: 'bold' }}>Trello</Typography>
         </Box>
 
-        <Workspaces />
-        <Recent />
-        <Starred />
-        <Templates />
-
-        <Button variant="outlined">Create</Button>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 0.5 }}>
+          <Workspaces />
+          <Recent />
+          <Starred />
+          <Templates />
+          <Button variant="outlined">Create</Button>
+        </Box>
       </Box>
 
       {/* Search */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-        <TextField id="outlined-search" label="Search..." type="search" size='small' sx={{ minWidth: 120 }}/>
+        <TextField id="outlined-search" label="Search..." type="search" size='small' sx={{ minWidth: 120 }} />
         <ModeSelect />
 
         <Tooltip title="Notification">
