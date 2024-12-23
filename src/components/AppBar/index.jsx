@@ -19,12 +19,14 @@ import Profiles from './Menus/Profiles';
 
 function AppBar() {
   return (
-    <Box sx={{
+    <Box px={2} sx={{
       height: (theme) => theme.trelloCustom.appBarHeight,
       width: '100%',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      gap: 2,
+      overflowX: 'auto'
     }}>
 
       {/* Navbar and Logo */}
@@ -45,18 +47,17 @@ function AppBar() {
           <Typography variant='span' sx={{ fontSize: '1.2rem', color: 'primary.main', fontWeight: 'bold' }}>Trello</Typography>
         </Box>
 
-        <Box sx={{ display: { sx: 'none', md: 'flex' }, gap: 1 }}>
-          <Workspaces />
-          <Recent />
-          <Starred />
-          <Templates />
-          <Button variant="outlined">Create</Button>
-        </Box>
+        <Workspaces />
+        <Recent />
+        <Starred />
+        <Templates />
+
+        <Button variant="outlined">Create</Button>
       </Box>
 
       {/* Search */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-        <TextField id="outlined-search" label="Search..." type="search" size='small' />
+        <TextField id="outlined-search" label="Search..." type="search" size='small' sx={{ minWidth: 120 }}/>
         <ModeSelect />
 
         <Tooltip title="Notification">

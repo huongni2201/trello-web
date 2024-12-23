@@ -1,3 +1,4 @@
+import { Height } from '@mui/icons-material';
 import { cyan, deepOrange, orange, teal } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles'
 
@@ -24,6 +25,24 @@ const theme = createTheme({
   spacing: (factor) => `${0.25 * factor}rem`,
 
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#bdc3c7',
+            borderRadius: '8px'
+          },
+          '*::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#00b894',
+            borderRadius: '8px'
+          }
+        }
+      }
+    },
     MuiButton: {
       styleOverrides: {
         root: {
