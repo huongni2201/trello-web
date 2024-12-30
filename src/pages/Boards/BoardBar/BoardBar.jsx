@@ -10,6 +10,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import Button from '@mui/material/Button';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import Tooltip from '@mui/material/Tooltip';
+import { capitalizeFirstLetter } from '~/utils/formatters'
 
 
 const MENU_STYLES = {
@@ -25,7 +26,8 @@ const MENU_STYLES = {
   }
 }
 
-function BoardBar() {
+function BoardBar({ board }) {
+
   return (
     <Box sx={{
       height: (theme) => theme.trelloCustom.boardBarHeight,
@@ -38,14 +40,15 @@ function BoardBar() {
       overflowX: 'auto',
       borderTop: '1px solid #00bfa5'
     }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: 'primary.main ' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: 'primary.main ',
+         '& .MuiButtonBase-root': { bgcolor: 'transparent'} }}>
         <Chip
           sx={MENU_STYLES}
-          icon={<DashboardIcon />} label="Trello Stack Board" clickable />
+          icon={<DashboardIcon />} label={board?.title} clickable />
 
         <Chip
           sx={MENU_STYLES}
-          icon={<VpnLockIcon />} label="Public/Private Workspace" clickable />
+          icon={<VpnLockIcon />} label={capitalizeFirstLetter(board?.type)} clickable />
 
         <Chip
           sx={MENU_STYLES}
@@ -75,7 +78,7 @@ function BoardBar() {
               border: 'none',
               color: 'white',
               cursor: 'pointer',
-              '&:first-of-type': { bgcolor: '#a4b0be'}
+              '&:first-of-type': { bgcolor: '#a4b0be' }
             }
           }}
         >
